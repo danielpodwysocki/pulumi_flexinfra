@@ -156,25 +156,29 @@ class Server:
     """A class representing a server.
     It can be passed to a provider to provision it. The configuration doesn't
     need to be changed for each provider - it is universal.
+
     :param name: the name of the server
-    :type name: str
     :param size: the size of the server. Should be one of the items in the sizes
     list
-    :type size: str
     :param image: the image to use for the server. Should be one of the items in
     the images list
-    :type image: str
     :param ip_address: the IP address to assign to the server
-    :type ip_address: str
+    :param tags: a dict of KV pairs to assign to the server
     """
 
     def __init__(
-        self, name: str, size: str, image: str, ip_address: str = None
+        self,
+        name: str,
+        size: str,
+        image: str,
+        ip_address: str = None,
+        tags: dict = {},
     ) -> None:
         self.name = name
         self.size = size
         self.image = image
         self.ip_address = ip_address
+        self.tags = tags
         pass
 
     def deploy(self):

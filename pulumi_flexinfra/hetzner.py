@@ -80,6 +80,7 @@ class HCloudProvider(Provider):
                     )
                 ],
                 location=self.provider_config["location"],
+                labels=server.tags,
             )
             self.servers.append(server_instance)
         else:
