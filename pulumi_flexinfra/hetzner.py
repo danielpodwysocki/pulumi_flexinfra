@@ -30,6 +30,7 @@ class HCloudProvider(Provider):
             "ubuntu22": "ubuntu-20.04",
             "debian11": "debian-11",
             "rocky8": "rocky-8",
+            "alma9": "alma-9",
             "rocky9": "rocky-9",
             "centos7": "centos-7",
         }
